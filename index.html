@@ -124,7 +124,7 @@ const home=()=>`
 <section class="about"><div class="av">👩‍🏫</div><div><h2>Chi sono</h2><p>Sono un'insegnante di scuola primaria e amo portare gli albi illustrati tra i banchi perché credo che un libro possa aprire una porta: verso una storia, un'emozione, una domanda, una scoperta.</p><a class="btn" href="#/chi-sono">Scopri la storia →</a></div></section>
 <p class="quote">"Una storia può iniziare da una pagina."</p>`;
 const list=t=>`<div class="page"><div class="sec"><small>${labels[t][0]}</small><h2>${t=='albo'?'Recensioni e consigli':'Attività e laboratori'}</h2>
-<p>${t=='albo'?'Gli albi illustrati che ho letto, amato e portato in classe.':'Idee e laboratori nati dagli albi, pronti da riprendere in classe.'}</p></div>
+<p>${t=='albo'?'Gli albi illustrati che ho letto, amato e portato in classe.':'Idee e laboratori nati dagli albi.'}</p></div>
 <div class="grid">${posts.filter(p=>p.type==t).map(card).join('')}</div></div>`;
 const post=id=>{const p=posts.find(x=>x.id==id);if(!p)return notfound();
  const others=posts.filter(x=>x.id!=id&&x.type==p.type),opp=posts.filter(x=>x.type!=p.type);
